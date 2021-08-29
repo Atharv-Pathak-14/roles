@@ -1,5 +1,6 @@
 require('dotenv').config();
 const Discord = require('discord.js');
+const TOKEN = process.env.BOT_TOKEN;
 // require Nuggies package
 const Nuggies = require('nuggies');
 const client = new Discord.Client();
@@ -7,7 +8,8 @@ const client = new Discord.Client();
 require('discord-buttons')(client);
 const fs = require('fs');
 // login to the bot
-client.login(process.env.BOT_TOKEN);
+client.login(TOKEN);
+
 
 client.on('ready', () => {
     console.log(`${client.user.tag} is online.`)
